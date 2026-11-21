@@ -4,63 +4,300 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Sales Analytical Dashboard</title>
+
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: Arial, sans-serif;
             background: #f1f5f9;
-            color: #172b4d;
+            color: #1e293b;
+        }
+
+        header {
+            background: #172b4d;
+            color: white;
+            padding: 22px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        header h2 {
+            color: #60a5fa;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #172b4d, #2563eb);
+            color: white;
             text-align: center;
-            padding: 50px 20px;
+            padding: 90px 20px;
         }
-        .container {
-            max-width: 750px;
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 700px;
             margin: auto;
-            background: white;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px #ccd5e0;
+            line-height: 1.8;
+            font-size: 17px;
         }
-        h1 { color: #2563eb; }
-        p { line-height: 1.7; }
-        a {
+
+        .btn {
             display: inline-block;
-            margin: 10px;
-            padding: 12px 20px;
+            padding: 13px 24px;
+            margin: 25px 8px 0;
+            background: #ffffff;
+            color: #1d4ed8;
+            text-decoration: none;
+            border-radius: 7px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: #dbeafe;
+        }
+
+        section {
+            padding: 65px 8%;
+            text-align: center;
+        }
+
+        section h2 {
+            font-size: 30px;
+            color: #172b4d;
+            margin-bottom: 25px;
+        }
+
+        .description {
+            max-width: 800px;
+            margin: auto;
+            line-height: 1.8;
+            color: #475569;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 22px;
+            margin-top: 35px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+        }
+
+        .card h3 {
+            color: #2563eb;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #64748b;
+            line-height: 1.6;
+        }
+
+        .tech {
+            background: #e2e8f0;
+        }
+
+        .tech-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .tech-list span {
+            background: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+            font-weight: bold;
+            color: #1d4ed8;
+        }
+
+        .project-links {
+            margin-top: 25px;
+        }
+
+        .project-links a {
+            display: inline-block;
             background: #2563eb;
             color: white;
             text-decoration: none;
-            border-radius: 6px;
+            padding: 14px 22px;
+            margin: 10px;
+            border-radius: 7px;
         }
-        a:hover { background: #172b4d; }
+
+        .project-links a:hover {
+            background: #172b4d;
+        }
+
+        footer {
+            background: #172b4d;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        @media(max-width: 600px) {
+            .hero h1 {
+                font-size: 30px;
+            }
+
+            nav a {
+                margin: 5px;
+                display: inline-block;
+            }
+        }
     </style>
 </head>
+
 <body>
-    <div class="container">
-        <h1>Sales Analytical Dashboard</h1>
 
-        <p>
-            A data analytics project designed to analyze
-            sales performance using Java, MySQL and Power BI.
-        </p>
+<header>
+    <h2>Sales Analytics</h2>
 
-        <h2>Project Features</h2>
-        <p>• Total Sales Analysis</p>
-        <p>• Total Profit Analysis</p>
-        <p>• Sales by Category</p>
-        <p>• Sales by Product</p>
-        <p>• Sales by Region</p>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#features">Features</a>
+        <a href="#technology">Technologies</a>
+        <a href="#project">Project</a>
+    </nav>
+</header>
 
-        <h2>Technologies Used</h2>
-        <p>Java | MySQL | Power BI | CSV</p>
+<div class="hero">
+    <h1>Sales Analytical Dashboard</h1>
 
-        <a href="Sales_Analytical_Dashboard_backup.pbix">
+    <p>
+        Transforming sales data into meaningful insights.
+        An analytical project using Java, MySQL and Power BI
+        to understand sales performance, profit and business trends.
+    </p>
+
+    <a href="#project" class="btn">Explore Project</a>
+</div>
+
+<section id="about">
+    <h2>About The Project</h2>
+
+    <p class="description">
+        The Sales Analytical Dashboard is a data analytics project
+        developed to analyze sales information and generate
+        meaningful business insights. It helps understand total
+        sales, profit, product performance, categories and
+        regional sales using data visualization.
+    </p>
+</section>
+
+<section id="features">
+    <h2>Project Features</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Total Sales</h3>
+            <p>Analyze overall sales performance.</p>
+        </div>
+
+        <div class="card">
+            <h3>Total Profit</h3>
+            <p>Understand business profitability.</p>
+        </div>
+
+        <div class="card">
+            <h3>Category Analysis</h3>
+            <p>Compare sales across different categories.</p>
+        </div>
+
+        <div class="card">
+            <h3>Product Analysis</h3>
+            <p>Identify product-wise sales performance.</p>
+        </div>
+
+        <div class="card">
+            <h3>Regional Analysis</h3>
+            <p>Analyze sales across different regions.</p>
+        </div>
+
+        <div class="card">
+            <h3>Data Visualization</h3>
+            <p>Present sales insights through Power BI charts.</p>
+        </div>
+
+    </div>
+</section>
+
+<section class="tech" id="technology">
+    <h2>Technologies Used</h2>
+
+    <div class="tech-list">
+        <span>Java</span>
+        <span>MySQL</span>
+        <span>Power BI</span>
+        <span>CSV</span>
+        <span>HTML</span>
+        <span>CSS</span>
+    </div>
+</section>
+
+<section id="project">
+    <h2>Explore My Project</h2>
+
+    <p class="description">
+        Explore the project source code and access the
+        Power BI dashboard file.
+    </p>
+
+    <div class="project-links">
+
+        <a href="Sales_Analytical_Dashboard_backup.pbix" download>
             Download Power BI Dashboard
         </a>
 
-        <a href="https://github.com/bandaruanitha2005/Sales-Analytical-Dashboard">
-            View Source Code
+        <a href="sample_sales.csv" download>
+            Download Dataset
         </a>
+
+        <a href="https://github.com/bandaruanitha2005/Sales-Analytical-Dashboard"
+           target="_blank">
+            View GitHub Repository
+        </a>
+
     </div>
+</section>
+
+<footer>
+    <p>Sales Analytical Dashboard | Data into Insights</p>
+    <p>Designed with HTML and CSS</p>
+</footer>
+
 </body>
 </html>
